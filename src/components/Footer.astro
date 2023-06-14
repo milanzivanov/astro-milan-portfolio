@@ -1,0 +1,60 @@
+---
+import Social from "./Social.astro";
+---
+
+<footer>
+  <div class="wrapper footer-container">
+    <div class="footer--left">
+      <p>&copy; 2023 Am Astro Portfolio.</p>
+    </div>
+    <div class="footer--right">
+      <Social
+        platform="linkedin"
+        username="/in/milan-živanov1983"
+        iconName="simple-icons:linkedin"
+      />
+      <Social
+        platform="github"
+        username="milanzivanov"
+        iconName="fa:github-square"
+      />
+    </div>
+  </div>
+</footer>
+
+<style is:global>
+  footer {
+    background-color: var(--background-color);
+    padding: 3rem 0;
+    color: var(--md-color);
+    box-shadow: 0 -1px 5px rgba(45, 45, 45, 0.3);
+  }
+
+  @media screen and (min-width: 1024px) {
+    footer {
+      padding: 2rem 0;
+    }
+  }
+  @media screen and (min-width: 1360px) {
+    footer {
+      padding: 1rem 0;
+    }
+  }
+
+  .footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  @media screen and (min-width: 768px) {
+    .footer-container {
+      flex-direction: row;
+    }
+  }
+
+  .footer--right {
+    display: flex;
+  }
+</style>

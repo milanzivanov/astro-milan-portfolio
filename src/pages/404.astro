@@ -1,0 +1,36 @@
+---
+import Layout from "../layouts/Layout.astro";
+import BaseHead from "../components/BaseHead.astro";
+
+const pageTitle = "404 page not found";
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <BaseHead pageTitle={pageTitle} />
+  </head>
+  <body>
+    <Layout>
+      <div class="wrapper">
+        <div class="hero-404">
+          <img src="/404.png" alt="page not found" />
+        </div>
+      </div>
+    </Layout>
+    <style>
+      .hero-404 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 88.2vh;
+      }
+
+      img {
+        max-width: 100%;
+        display: block;
+        height: 70vh;
+      }
+    </style>
+  </body>
+</html>

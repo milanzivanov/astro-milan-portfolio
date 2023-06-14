@@ -1,0 +1,63 @@
+---
+import { Icon } from "astro-icon";
+const { title, url, imageSrc, alt, description } = Astro.props;
+---
+
+<div class="portfolio--container">
+  <div class="portfoli__box portfoli__box--img">
+    <h3 class="h3-title h3-title--position">
+      {title}
+    </h3>
+    <a href={url}>
+      <img src={imageSrc} alt={alt} />
+    </a>
+  </div>
+  <div class="portfoli__box portfoli__box--text">
+    <h3 class="h3-title h3-title--for-desktop">
+      {title}
+    </h3>
+    <p class="text-default text-default--pb">
+      {description}
+    </p>
+    <a class="portfoli__box--link" href={url}>
+      <span>Read more</span>
+      <Icon name="fe:arrow-right" class="svg-arrow" />
+    </a>
+  </div>
+</div>
+
+<style is:global>
+  .portfoli__box--link {
+    display: flex;
+    padding: 0.5rem;
+    background: var(--primary-heading-color);
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    border-radius: 10px;
+    color: #fff;
+    box-shadow: 0 2px 10px rgba(45, 45, 45, 0.2);
+    opacity: 0.8;
+    transition: 0.3s;
+  }
+
+  @media screen and (min-width: 768px) {
+    .portfoli__box--link {
+      width: 35%;
+    }
+  }
+  @media screen and (min-width: 1024px) {
+    .portfoli__box--link {
+      width: 30%;
+    }
+  }
+
+  .portfoli__box--link:hover {
+    opacity: 1;
+  }
+
+  .svg-arrow {
+    width: 25px;
+    color: #fff;
+  }
+</style>

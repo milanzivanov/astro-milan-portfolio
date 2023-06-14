@@ -1,0 +1,41 @@
+---
+// Import the global.css file here so that it is included on
+// all pages through the use of the <BaseHead /> component.
+import "../styles/global.css";
+
+const { pageTitle } = Astro.props;
+---
+
+<!-- Global Metadata -->
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width" />
+
+<!-- Favicon -->
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon2022.ico" />
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+  href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;500;600;700;800;900&display=swap"
+  rel="stylesheet"
+/>
+
+<meta name="generator" content={Astro.generator} />
+
+<!-- Primary Meta Tags -->
+<title>{pageTitle}</title>
+<!-- <meta name="title" content={title} />
+<meta name="description" content={description} /> -->
+
+<!-- Theme Util -->
+<script src="/lib/theme-util.js" is:inline></script>
+
+<!-- {
+  title && (
+    <link rel="canonical" href={`${info.baseUrl}${Astro.url.pathname}`} />
+  )
+}
+{title && <title>{`${title} - ${info.name}`}</title>}
+{title && <meta name="title" content={`${title} - ${info.name}`} />}
+{description && <meta name="description" content={description} />} -->

@@ -1,0 +1,47 @@
+---
+import Layout from "../layouts/Layout.astro";
+import BaseHead from "../components/BaseHead.astro";
+import BlogWork from "../components/BlogWork.astro";
+import Footer from "../components/Footer.astro";
+const allWorks = await Astro.glob("../pages/works/*.md");
+
+const pageTitle = "Portfolio";
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <BaseHead pageTitle={pageTitle} />
+  </head>
+  <body>
+    <Layout>
+      <div class="work-section">
+        <div class="wrapper">
+          <h2 class="h2-title">Some of my projects:</h2>
+
+          <div class="portfolio">
+            {
+              allWorks.map((work) => (
+                <BlogWork
+                  url={work.url}
+                  title={work.frontmatter.title}
+                  imageSrc={work.frontmatter.image.url}
+                  alt={work.frontmatter.image.alt}
+                  description={work.frontmatter.description}
+                />
+              ))
+            }
+          </div>
+        </div>
+      </div>
+      <Footer />
+    </Layout>
+    <style>
+      .h2-title {
+        font-size: 1.5rem;
+        padding: 2rem 0;
+        color: var(--primary-heading-color);
+      }
+    </style>
+  </body>
+</html>

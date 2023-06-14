@@ -1,0 +1,23 @@
+---
+import { Icon } from "astro-icon";
+const { platform, username, iconName } = Astro.props;
+---
+
+<a href={`https://www.${platform}.com/${username}`}>
+  <Icon name={iconName} width="40" class="svg-social-icon" />
+</a>
+
+<style>
+  a {
+    padding: 0.5rem 0.5rem 0.5rem 0;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .svg-social-icon {
+    width: 35px;
+    color: var(--primary-heading-color);
+  }
+</style>

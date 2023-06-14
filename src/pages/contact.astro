@@ -1,0 +1,24 @@
+---
+import Layout from "../layouts/Layout.astro";
+import BaseHead from "../components/BaseHead.astro";
+import Footer from "../components/Footer.astro";
+
+const pageTitle = "Contact me";
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <BaseHead pageTitle={pageTitle} />
+  </head>
+  <body>
+    <Layout>
+      <section class="contact">
+        <div class="wrapper"></div>
+      </section>
+
+      <Footer />
+      <style></style>
+    </Layout>
+  </body>
+</html>

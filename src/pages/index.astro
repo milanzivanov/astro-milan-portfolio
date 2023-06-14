@@ -1,0 +1,39 @@
+---
+import Layout from "../layouts/Layout.astro";
+import BaseHead from "../components/BaseHead.astro";
+
+const pageTitle = "Home page";
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <BaseHead pageTitle={pageTitle} />
+  </head>
+  <body class="bg">
+    <Layout>
+      <div class="wrapper">
+        <div class="hero">
+          <div class="hero__bg-image"></div>
+          <div class="hero-container">
+            <div class="hero-container__box hero-container__box--pr">
+              <h1 class="h1-primary-title">
+                <span class="hero--block"
+                  >I'am <span class="h1-primary-title--text-bold">Milan</span
+                  >.</span
+                >
+                <span class="hero--block">A curiosity driven.</span>
+                <span class="hero--block"
+                  ><span
+                    class="h1-primary-title--text-bold h1-primary-title--color"
+                    >Frontend developer</span
+                  ></span
+                >
+              </h1>
+            </div>
+          </div>
+        </div>
+      </div>
+    </Layout>
+  </body>
+</html>

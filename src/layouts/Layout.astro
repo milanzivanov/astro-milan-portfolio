@@ -1,0 +1,18 @@
+---
+import Header from "../components/Header.astro";
+import NavigationForMobile from "../components/NavigationForMobile.astro";
+import "../styles/global.css";
+---
+
+<Header />
+<NavigationForMobile />
+
+<main class="main">
+  <slot />
+</main>
+
+<script>
+  import "../scripts/menu.js";
+</script>
+<!-- Theme Util -->
+<script src="/lib/theme-util.js" type="text/javascript" is:inline></script>
