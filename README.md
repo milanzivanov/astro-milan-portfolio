@@ -1,6 +1,6 @@
 # Astro Milan Portfolio
 
-[Portfolio view](https://astro-milan-portfolio.netlify.app/)
+[Portfolio view](https://astro-milan.netlify.app/)
 
 > 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
 
