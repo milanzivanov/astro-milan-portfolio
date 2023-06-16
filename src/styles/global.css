@@ -634,7 +634,6 @@ html {
 .contact-container__form {
   width: 100%;
   padding: 1rem;
-  /* margin: 1rem; */
   display: flex;
   flex-direction: column;
   background-color: var(--background-color);
