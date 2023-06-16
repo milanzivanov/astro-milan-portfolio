@@ -634,10 +634,10 @@ html {
 .contact-container__form {
   width: 100%;
   padding: 1rem;
+  /* margin: 1rem; */
   display: flex;
   flex-direction: column;
   background-color: var(--background-color);
-  margin: 1rem;
   border-radius: 20px;
   box-shadow: 0 2px 10px rgba(45, 45, 45, 0.1);
 }
