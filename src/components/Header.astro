@@ -2,6 +2,7 @@
 import Hamburger from "./Hamburger.astro";
 import Navigation from "./Navigation.astro";
 import ThemeIcon from "./ThemeIcon.astro";
+import Social from "./Social.astro";
 import { Icon } from "astro-icon";
 ---
 
@@ -18,7 +19,19 @@ import { Icon } from "astro-icon";
       </nav>
 
       <div class="header-icon-container">
-        <ThemeIcon id="theme-toggle" />
+        <div class="social-container-icons">
+          <Social
+            platform="github"
+            username="milanzivanov"
+            iconName="fa:github-square"
+          />
+          <Social
+            platform="linkedin"
+            username="/in/milan-živanov1983"
+            iconName="simple-icons:linkedin"
+          />
+        </div>
+        <ThemeIcon />
         <Hamburger />
       </div>
     </div>
@@ -30,6 +43,7 @@ import { Icon } from "astro-icon";
     position: relative;
     z-index: 11;
     padding: 1rem 0;
+    box-shadow: 0 1px 5px rgba(45, 45, 45, 0.1);
   }
 
   .header__container {
@@ -40,15 +54,13 @@ import { Icon } from "astro-icon";
 
   .header-icon-container {
     display: flex;
-    background-color: #fffffc;
+    background-color: var(--header-color);
     box-shadow: 0 2px 10px rgba(45, 45, 45, 0.1);
     padding: 0.5rem;
     border-radius: 10px;
   }
 
   .logo {
-    width: 80px;
-    height: 80px;
     background-color: var(--header-color);
     /* border-radius: 200px;
     overflow: hidden; */
@@ -62,9 +74,7 @@ import { Icon } from "astro-icon";
   .svg-logo {
     width: 53px;
     height: auto;
-    /* fill: var(--primary-heading-color); */
-
-    fill: #23a6d5;
+    fill: var(--primary-heading-color);
   }
 
   @media screen and (min-width: 1024px) {
@@ -85,7 +95,7 @@ import { Icon } from "astro-icon";
     width: 45px;
     height: 5px;
     margin-bottom: 10px;
-    background-color: #444;
+    background-color: var(--background-color);
     transition: transform ease-in-out 300ms;
   }
 
@@ -114,7 +124,7 @@ import { Icon } from "astro-icon";
   }
 
   nav {
-    margin-left: auto;
+    margin-right: auto;
   }
 
   .nav-links a {
@@ -131,6 +141,16 @@ import { Icon } from "astro-icon";
   @media screen and (min-width: 1360px) {
     .nav-links a {
       font-size: 1.2rem;
+    }
+  }
+
+  .social-container-icons {
+    display: none;
+  }
+
+  @media screen and (min-width: 1024px) {
+    .social-container-icons {
+      display: flex;
     }
   }
 
@@ -165,7 +185,7 @@ import { Icon } from "astro-icon";
 
   @media screen and (min-width: 1024px) {
     .nav-links {
-      margin-left: 5em;
+      margin-left: 3rem;
       display: flex;
       position: static;
       width: auto;
@@ -179,14 +199,12 @@ import { Icon } from "astro-icon";
     }
 
     a.active {
-      /* color: var(--primary-heading-color); */
-      color: #23a6d5;
+      color: var(--primary-heading-color);
     }
 
     .nav-links a:hover,
     a:focus {
-      /* color: var(--primary-heading-color); */
-      color: #23a6d5;
+      color: var(--primary-heading-color);
     }
 
     .hamburger {
