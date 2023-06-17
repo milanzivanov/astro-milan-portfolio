@@ -3,20 +3,6 @@ const { id } = Astro.props;
 ---
 
 <div class="toggle-container">
-  <!-- <span class="light"></span>
-  <div class="display-flex">
-    <label class="switch" aria-label="Switch theme">
-      <input
-        id={id}
-        class="theme-toggle"
-        type="checkbox"
-        onclick="togglePreference()"
-      />
-      <span class="slider round"></span>
-    </label>
-  </div>
-  <span class="dark"></span> -->
-
   <label class="switch">
     <span class="sun"
       ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
@@ -45,6 +31,12 @@ const { id } = Astro.props;
     flex-direction: row;
     align-items: center;
     padding-right: 0.5rem;
+  }
+
+  @media screen and (min-width: 768px) {
+    .toggle-container {
+      padding-right: 0;
+    }
   }
 
   .switch {
@@ -144,11 +136,11 @@ const { id } = Astro.props;
   }
 
   .input:checked + .slider {
-    background-color: #183153;
+    background-color: #333;
   }
 
   .input:focus + .slider {
-    box-shadow: 0 0 1px #183153;
+    box-shadow: 0 0 1px #333;
   }
 
   .input:checked + .slider:before {
