@@ -7,3 +7,12 @@ document.querySelector(".hamburger").addEventListener("click", () => {
 
   document.querySelector(".nav-links__mobile").classList.toggle("open");
 });
+
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape") {
+    document.querySelector(".nav-links__mobile").classList.remove("active");
+    document
+      .querySelector(".line--middle, .line--top, .nav-links__mobile")
+      .classList.remove("active");
+  }
+});
