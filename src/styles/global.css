@@ -220,11 +220,12 @@ html {
 .h1-primary-title {
   font-family: Poppins, Montserrat, sans-serif;
   font-weight: 400;
+  color: var(--primary-heading-color);
 
   font-size: 3rem;
   line-height: 1.1;
 
-  background: linear-gradient(
+  /* background: linear-gradient(
     0deg,
     #333 -1.72%,
     #33d2ff 54.05%,
@@ -236,7 +237,7 @@ html {
   background-clip: text;
   text-fill-color: transparent;
   background-size: 150% 150%;
-  animation: gradient 15s ease infinite;
+  animation: gradient 15s ease infinite; */
 }
 
 .h1-primary-title--text-bold {
@@ -244,13 +245,12 @@ html {
 }
 
 .h1-primary-title--color {
-  background: var(--test-color);
-  -webkit-background-clip: text;
+  /* -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
   text-fill-color: transparent;
   background-size: 150% 150%;
-  animation: gradient 15s ease infinite;
+  animation: gradient 15s ease infinite; */
 }
 
 @media screen and (min-width: 768px) {
@@ -661,7 +661,6 @@ label.form__label {
 .form__btn {
   border: 0;
   width: 100%;
-  font-size: 0.5rem;
   padding: 1rem;
   background-color: var(--primary-heading-color);
   display: inline-block;

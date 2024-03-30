@@ -18,8 +18,8 @@ import { Icon } from "astro-icon";
         <Navigation />
       </nav>
 
-      <div class="header-icon-container">
-        <div class="social-container-icons">
+      <!-- <div class="header-icon-container"> -->
+      <!-- <div class="social-container-icons">
           <Social
             platform="github"
             username="milanzivanov"
@@ -30,10 +30,10 @@ import { Icon } from "astro-icon";
             username="/in/milan-živanov1983"
             iconName="simple-icons:linkedin"
           />
-        </div>
-        <ThemeIcon />
-        <Hamburger />
-      </div>
+        </div> -->
+      <ThemeIcon />
+      <Hamburger />
+      <!-- </div> -->
     </div>
   </div>
 </header>
@@ -52,13 +52,13 @@ import { Icon } from "astro-icon";
     align-items: center;
   }
 
-  .header-icon-container {
+  /* .header-icon-container {
     display: flex;
     background-color: var(--header-color);
     box-shadow: 0 2px 10px rgba(45, 45, 45, 0.1);
     padding: 0.5rem;
     border-radius: 10px;
-  }
+  } */
 
   .logo {
     display: block;
@@ -132,7 +132,6 @@ import { Icon } from "astro-icon";
     padding: 10px 0;
     text-decoration: none;
     font-size: 1rem;
-    font-weight: bold;
     text-transform: capitalize;
     color: var(--color);
   }
@@ -176,7 +175,7 @@ import { Icon } from "astro-icon";
     text-decoration: none;
     padding: 1rem;
     color: var(--color);
-    font-size: 1.7rem;
+    font-size: 1rem;
     text-decoration: underline;
   }
 
