@@ -37,9 +37,11 @@
 
   const nav = document.querySelector(".nav-links");
   const navLinks = nav.querySelectorAll("a");
-  const currentURL = window.location.href;
+  const currentPath = window.location.pathname; // Use pathname instead of href
+
   navLinks.forEach((link) => {
-    if (link.href === currentURL) {
+    // Compare the pathname of the current URL with the pathname of the link
+    if (link.pathname === currentPath) {
       link.classList.add("active");
     } else {
       link.classList.remove("active");
