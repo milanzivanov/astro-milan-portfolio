@@ -126,7 +126,7 @@ import { Icon } from "astro-icon";
     margin-right: auto;
   }
 
-  .nav-links a {
+  .nav-link {
     display: block;
     text-align: center;
     padding: 10px 0;
@@ -136,21 +136,21 @@ import { Icon } from "astro-icon";
     color: var(--color);
   }
 
-  @media screen and (min-width: 1360px) {
+  /* @media screen and (min-width: 1360px) {
     .nav-links a {
       font-size: 1.2rem;
     }
-  }
+  } */
 
-  .social-container-icons {
+  /* .social-container-icons {
     display: none;
-  }
+  } */
 
-  @media screen and (min-width: 1024px) {
+  /* @media screen and (min-width: 1024px) {
     .social-container-icons {
       display: flex;
     }
-  }
+  } */
 
   /* mob nav */
   .nav-links__mobile {
@@ -192,18 +192,18 @@ import { Icon } from "astro-icon";
       background: none;
     }
 
-    .nav-links a {
+    .nav-link {
       display: inline-block;
       padding: 15px 20px;
       color: var(--header-color);
     }
 
-    a.active {
+    /* a.active {
       color: var(--primary-heading-color);
-    }
+    } */
 
-    .nav-links a:hover,
-    a:focus {
+    .nav-link:hover,
+    .nav-link:focus {
       color: var(--primary-heading-color);
     }
 

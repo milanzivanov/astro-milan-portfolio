@@ -1,23 +1,42 @@
 ---
-// const pathname = new URL(Astro.request.url).pathname;
-// const currentPath = pathname.slice(1); // remove the first "/"
+const pathname = new URL(Astro.request.url).pathname;
+const currentPath = pathname.slice(1); // remove the first "/"
+// console.log(pathname);
+// console.log(currentPath);
 ---
 
 <!-- astro way it do not work when I deploy on netlify --><!-- <div class="nav-links">
   <a class={currentPath === "" ? "active" : ""} href="/">Home</a>
   <a class={currentPath === "work" ? "active" : ""} href="/work">Portfolio</a>
   <a class={currentPath === "about" ? "active" : ""} href="/about">About</a>
-</div> --><!-- <div class="nav-links">
+</div> -->
+<ul class="nav-links" id="menu">
+  <li role="none">
+    <a role="menuitem" href="/" class="nav-link btn"> home</a>
+  </li>
+  <li role="none">
+    <a role="menuitem" href="/work" class="nav-link btn"> portfolio</a>
+  </li>
+  <li role="none">
+    <a role="menuitem" href="/about" class="nav-link btn"> about me</a>
+  </li>
+</ul>
+
+<!-- ddd --><!-- <div class="nav-links">
   <a class="active" href="/">Home</a>
   <a href="/work">Portfolio</a>
   <a href="/about">About Me</a>
-</div> -->
-<div class="nav-links">
+</div> --><!-- <div class="nav-links">
   <a id="homeLink" href="/">Home</a>
   <a id="workLink" href="/work">Portfolio</a>
   <a id="aboutLink" href="/about">About</a>
-</div>
+</div> -->
 
+<style>
+  .nav-link[aria-current="page"] {
+    color: var(--primary-heading-color);
+  }
+</style>
 <script>
   // const navLinks = document.querySelectorAll(".nav-links a");
 
@@ -52,18 +71,18 @@
   // });
 
   // 3
-  document.addEventListener("DOMContentLoaded", (event) => {
-    const currentPath = window.location.pathname;
-    const homeLink = document.getElementById("homeLink");
-    const workLink = document.getElementById("workLink");
-    const aboutLink = document.getElementById("aboutLink");
+  // document.addEventListener("DOMContentLoaded", (event) => {
+  //   const currentPath = window.location.pathname;
+  //   const homeLink = document.getElementById("homeLink");
+  //   const workLink = document.getElementById("workLink");
+  //   const aboutLink = document.getElementById("aboutLink");
 
-    if (currentPath === "/") {
-      homeLink.classList.add("active");
-    } else if (currentPath === "/work") {
-      workLink.classList.add("active");
-    } else if (currentPath === "/about") {
-      aboutLink.classList.add("active");
-    }
-  });
+  //   if (currentPath === "/") {
+  //     homeLink.classList.add("active");
+  //   } else if (currentPath === "/work") {
+  //     workLink.classList.add("active");
+  //   } else if (currentPath === "/about") {
+  //     aboutLink.classList.add("active");
+  //   }
+  // });
 </script>

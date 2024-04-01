@@ -1,3 +1,4 @@
+// hamburger menu
 document.querySelector(".hamburger").addEventListener("click", () => {
   document.querySelector(".line--middle").classList.toggle("active");
 
@@ -14,5 +15,12 @@ document.addEventListener("keydown", (e) => {
     document
       .querySelector(".line--middle, .line--top, .nav-links__mobile")
       .classList.remove("active");
+  }
+});
+
+// active link
+document.querySelectorAll(".nav-link").forEach((link) => {
+  if (link.href === window.location.href) {
+    link.setAttribute("aria-current", "page");
   }
 });
