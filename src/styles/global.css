@@ -446,11 +446,11 @@ html {
   margin: auto;
 }
 
-@media screen and (min-width: 1500px) {
+/* @media screen and (min-width: 1500px) {
   .about-container--small {
     width: 90%;
   }
-}
+} */
 
 .about-container__box {
   background-color: #fff;
