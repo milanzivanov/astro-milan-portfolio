@@ -2,7 +2,7 @@
 const pathname = new URL(Astro.request.url).pathname;
 // remove the first "/"
 // const currentPath = pathname.slice(1);
-const currentPath = pathname.substring(1);
+const currentPath = pathname;
 // console.log(pathname, currentPath);
 // console.log(currentPath);
 ---
@@ -13,82 +13,9 @@ const currentPath = pathname.substring(1);
   <a class={currentPath === "work" ? "active" : ""} href="/work">Portfolio</a>
   <a class={currentPath === "about" ? "active" : ""} href="/about">About</a>
 </div>
-<!-- <ul class="nav-links" id="menu">
-  <li role="none">
-    <a role="menuitem" href="/" class="nav-link btn"> home</a>
-  </li>
-  <li role="none">
-    <a role="menuitem" href="/work" class="nav-link btn"> portfolio</a>
-  </li>
-  <li role="none">
-    <a role="menuitem" href="/about" class="nav-link btn"> about me</a>
-  </li>
-</ul> -->
-
-<!-- ddd --><!-- <div class="nav-links">
-  <a class="active" href="/">Home</a>
-  <a href="/work">Portfolio</a>
-  <a href="/about">About Me</a>
-</div> --><!-- <div class="nav-links">
-  <a id="homeLink" href="/">Home</a>
-  <a id="workLink" href="/work">Portfolio</a>
-  <a id="aboutLink" href="/about">About</a>
-</div> -->
-
-<!-- <style>
-  .nav-link[aria-current="page"] {
-    color: var(--primary-heading-color);
-  }
-</style> -->
 <script>
-  // const navLinks = document.querySelectorAll(".nav-links a");
-
-  // navLinks.forEach((link) => {
-  //   link.classList.remove("active");
-
-  //   // `slice` here to remove the first `/` in pathname
   const pathname = window.location.pathname;
   const currentPath = pathname.slice(1);
   console.log(pathname, currentPath);
   console.log(pathname === currentPath);
-
-  //   // `link.href` returns a whole url, such as: "https://milanzivanov.com/about" and we only need the last part
-  //   const hrefArray = link.href.split("/");
-
-  //   const thisPath = hrefArray[hrefArray.length - 1];
-
-  //   if (currentPath === thisPath) {
-  //     link.classList.add("active");
-  //   }
-  // });
-
-  // 2
-  // const nav = document.querySelector(".nav-links");
-  // const navLinks = nav.querySelectorAll("a");
-  // const currentPath = window.location.pathname; // Use pathname instead of href
-
-  // navLinks.forEach((link) => {
-  //   // Compare the pathname of the current URL with the pathname of the link
-  //   if (link.pathname === currentPath) {
-  //     link.classList.add("active");
-  //   } else {
-  //     link.classList.remove("active");
-  //   }
-  // });
-
-  // 3
-  // document.addEventListener("DOMContentLoaded", (event) => {
-  //   const currentPath = window.location.pathname;
-  //   const homeLink = document.getElementById("homeLink");
-  //   const workLink = document.getElementById("workLink");
-  //   const aboutLink = document.getElementById("aboutLink");
-
-  //   if (currentPath === "/") {
-  //     homeLink.classList.add("active");
-  //   } else if (currentPath === "/work") {
-  //     workLink.classList.add("active");
-  //   } else if (currentPath === "/about") {
-  //     aboutLink.classList.add("active");
-  //   }
-  // });
 </script>
