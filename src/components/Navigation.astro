@@ -34,11 +34,11 @@ console.log(pathname, currentPath);
   <a id="aboutLink" href="/about">About</a>
 </div> -->
 
-<style>
+<!-- <style>
   .nav-link[aria-current="page"] {
     color: var(--primary-heading-color);
   }
-</style>
+</style> -->
 <script>
   // const navLinks = document.querySelectorAll(".nav-links a");
 
@@ -46,7 +46,9 @@ console.log(pathname, currentPath);
   //   link.classList.remove("active");
 
   //   // `slice` here to remove the first `/` in pathname
-  //   const currentPath = window.location.pathname.slice(1);
+  const pathname = window.location.pathname;
+  const currentPath = pathname.slice(1);
+  console.log(pathname, currentPath);
 
   //   // `link.href` returns a whole url, such as: "https://milanzivanov.com/about" and we only need the last part
   //   const hrefArray = link.href.split("/");
