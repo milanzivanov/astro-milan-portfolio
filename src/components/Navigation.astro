@@ -12,8 +12,8 @@ console.log(currentPath === pathname);
 <!-- astro way it do not work when I deploy on netlify -->
 <div class="nav-links">
   <a class={currentPath === "/" ? "active" : ""} href="/">Home</a>
-  <a class={currentPath === "/work" ? "active" : ""} href="/work">Portfolio</a>
-  <a class={currentPath === "/about" ? "active" : ""} href="/about">About</a>
+  <a class={currentPath === "/work" ? "active" : ""} href="work">Portfolio</a>
+  <a class={currentPath === "/about" ? "active" : ""} href="about">About</a>
 </div>
 <script>
   const pathname = window.location.pathname;
