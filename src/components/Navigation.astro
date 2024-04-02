@@ -18,8 +18,8 @@ console.log(currentPath);
 </div> -->
 <nav>
   <a class="active" href="/">Home</a>
-  <a href="/work">Portfolio</a>
-  <a href="/about">About Me</a>
+  <a href="work">Portfolio</a>
+  <a href="about">About Me</a>
 </nav>
 
 <style>
@@ -42,6 +42,7 @@ console.log(currentPath);
 
     // `slice` here to remove the first `/` in pathname
     const currentPath = window.location.pathname.slice(1);
+    console.log(currentPath);
 
     // `link.href` returns a whole url, such as: "https://milanzivanov.com/about" and we only need the last part
     const hrefArray = link.href.split("/");
