@@ -2,16 +2,18 @@
 const pathname = new URL(Astro.request.url).pathname;
 // remove the first "/"
 // const currentPath = pathname.slice(1);
-const currentPath = pathname.substring(1);
-// console.log(pathname, currentPath);
-// console.log(currentPath);
+const currentPath = "/" + pathname.substring(1);
+// const currentPath = pathname.match(/\/(.+)/)[1];
+
+console.log(currentPath, pathname);
+console.log(currentPath === pathname);
 ---
 
 <!-- astro way it do not work when I deploy on netlify -->
 <div class="nav-links">
-  <a class={currentPath === "" ? "active" : ""} href="/">Home</a>
-  <a class={currentPath === "/work" ? "active" : ""} href="/work/">Portfolio</a>
-  <a class={currentPath === "/about" ? "active" : ""} href="/about/">About</a>
+  <a class={currentPath === "/" ? "active" : ""} href="/">Home</a>
+  <a class={currentPath === "/work" ? "active" : ""} href="/work">Portfolio</a>
+  <a class={currentPath === "/about" ? "active" : ""} href="/about">About</a>
 </div>
 <script>
   const pathname = window.location.pathname;
