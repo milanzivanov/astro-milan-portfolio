@@ -1,6 +1,8 @@
 ---
+// const pathname = new URL(Astro.request.url).pathname;
+// const currentPath = pathname.slice(1); // remove the first "/"
+
 const pathname = new URL(Astro.request.url).pathname;
-// const currentPath = pathname.replace(/^\/(.+)/, "$1");
 
 const originalString = pathname;
 const currentPath = originalString.replace(/^\/|\/$/g, "");
@@ -17,9 +19,12 @@ console.log("currentPath", currentPath);
   <a class={currentPath === "about" ? "active" : ""} href="about">About</a>
 </div>
 
-<!-- <script>
+<script>
   const pathname = window.location.pathname;
-  const currentPath = pathname.replace(/^\/(.+)/, "$1");
-  console.log("currentPath", currentPath);
+  const originalString = pathname;
+  const currentPath = originalString.replace(/^\/|\/$/g, "");
+
+  console.log("original sting", originalString);
   console.log("pathname", pathname);
-</script> -->
+  console.log("currentPath", currentPath);
+</script>
