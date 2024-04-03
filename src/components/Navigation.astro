@@ -5,7 +5,7 @@
 const pathname = new URL(Astro.request.url).pathname;
 
 const originalString = pathname;
-const currentPath = originalString.replace(/^\/|\/$/g, "");
+let currentPath = originalString.replace(/^\/|\/$/g, "");
 console.log(currentPath);
 console.log("pathname", pathname);
 console.log("currentPath", currentPath);
