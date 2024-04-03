@@ -3,7 +3,6 @@
 // const currentPath = pathname.slice(1); // remove the first "/"
 
 const pathname = new URL(Astro.request.url).pathname;
-
 const originalString = pathname;
 let currentPath = originalString.replace(/^\/|\/$/g, "");
 console.log(currentPath);
