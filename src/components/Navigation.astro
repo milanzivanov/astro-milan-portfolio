@@ -14,8 +14,8 @@ console.log("currentPath", currentPath);
 <!-- astro way it do not work when I deploy on netlify on localhost it is working-->
 <div class="nav-links">
   <a class={currentPath === "" ? "active" : ""} href="/">Home</a>
-  <a class={currentPath === "/work" ? "active" : ""} href="work">Portfolio</a>
-  <a class={currentPath === "/about" ? "active" : ""} href="about">About</a>
+  <a class={currentPath === "work" ? "active" : ""} href="work">Portfolio</a>
+  <a class={currentPath === "about" ? "active" : ""} href="about">About</a>
 </div>
 
 <script>
