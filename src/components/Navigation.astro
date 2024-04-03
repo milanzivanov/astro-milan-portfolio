@@ -17,10 +17,9 @@ console.log("currentPath", currentPath);
   <a class={currentPath === "about" ? "active" : ""} href="about">About</a>
 </div>
 
-<script>
-  // const currentPath = Astro.url.pathname.replace(/\/$/, "");
+<!-- <script>
   const pathname = window.location.pathname;
   const currentPath = pathname.replace(/^\/(.+)/, "$1");
   console.log("currentPath", currentPath);
   console.log("pathname", pathname);
-</script>
+</script> -->
