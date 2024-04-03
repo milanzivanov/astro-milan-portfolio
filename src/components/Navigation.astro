@@ -1,6 +1,10 @@
 ---
 const pathname = new URL(Astro.request.url).pathname;
-const currentPath = pathname.replace(/^\/(.+)/, "$1");
+// const currentPath = pathname.replace(/^\/(.+)/, "$1");
+
+const originalString = pathname;
+const currentPath = originalString.replace(/^\/|\/$/g, "");
+console.log(currentPath); // Output: "work"
 
 console.log("pathname", pathname);
 console.log("currentPath", currentPath);
@@ -8,7 +12,7 @@ console.log("currentPath", currentPath);
 
 <!-- astro way it do not work when I deploy on netlify on localhost it is working-->
 <div class="nav-links">
-  <a class={currentPath === "/" ? "active" : ""} href="/">Home</a>
+  <a class={currentPath === "" ? "active" : ""} href="/">Home</a>
   <a class={currentPath === "work" ? "active" : ""} href="work">Portfolio</a>
   <a class={currentPath === "about" ? "active" : ""} href="about">About</a>
 </div>
