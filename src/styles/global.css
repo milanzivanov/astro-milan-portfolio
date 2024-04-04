@@ -126,7 +126,7 @@ body {
   z-index: 1;
   background-color: var(--background-color);
   height: 100vh;
-  background: url("it-wire.svg");
+  background: url("/public/it-wire.svg") repeat;
 }
 
 .wrapper {
@@ -191,7 +191,7 @@ body {
     justify-content: flex-start;
     overflow: hidden;
     box-shadow: 0 2px 10px rgba(45, 45, 45, 0.1);
-    padding: 1rem;
+    padding: 0 1rem;
   }
 }
 
