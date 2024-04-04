@@ -1,6 +1,6 @@
 ---
 layout: ../../layouts/MarkdownPostLayout.astro
-title: "The first project"
+title: "First project"
 pubDate: 2022-07-01
 description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora, officia! Tempore dicta mollitia blanditiis aspernatur temporibus provident numquam expedita ab sapiente, minima repellat nihil fuga facere reprehenderit maiores deleniti hic."
 author: "Astro Milan"

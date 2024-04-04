@@ -188,7 +188,7 @@ html {
     justify-content: flex-start;
     overflow: hidden;
     box-shadow: 0 2px 10px rgba(45, 45, 45, 0.1);
-    padding: 0 1rem;
+    padding: 1rem;
   }
 }
 
@@ -224,38 +224,16 @@ html {
 
   font-size: 3rem;
   line-height: 1.1;
-
-  /* background: linear-gradient(
-    0deg,
-    #333 -1.72%,
-    #33d2ff 54.05%,
-    #9845e8 99.78%
-  );
-
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  text-fill-color: transparent;
-  background-size: 150% 150%;
-  animation: gradient 15s ease infinite; */
 }
 
 .h1-primary-title--text-bold {
   font-weight: 800;
-}
-
-.h1-primary-title--color {
-  /* -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  text-fill-color: transparent;
-  background-size: 150% 150%;
-  animation: gradient 15s ease infinite; */
+  color: var(--primary-heading-color);
 }
 
 @media screen and (min-width: 768px) {
   .h1-primary-title {
-    font-size: 3.7rem;
+    font-size: 3.5rem;
     line-height: 1.3;
   }
 }
@@ -278,7 +256,7 @@ html {
 
 .h2-title {
   font-size: 1.1rem;
-  text-transform: capitalize;
+  text-transform: uppercase;
   padding: 1rem 0;
   color: var(--primary-heading-color);
 }
@@ -296,9 +274,14 @@ html {
 
 .h3-title {
   font-size: 1.3rem;
-  text-transform: capitalize;
   padding: 0 0 1.5rem 0;
   color: var(--primary-heading-color);
+}
+
+@media screen and (min-width: 768px) {
+  .h3-title {
+    font-size: 1.5rem;
+  }
 }
 
 .text-default {
@@ -360,7 +343,6 @@ html {
   z-index: 10;
   top: 50%;
   transform: translateY(-50%);
-  background: var(--background-color);
   width: 85%;
   transition: 0.5s ease;
   color: var(--primary-heading-color);
@@ -620,6 +602,8 @@ html {
 @media screen and (min-width: 1360px) {
   .contact-container__item:first-child {
     display: flex;
+    background: url("/public/Milan_right.webp") no-repeat bottom left;
+    background-size: contain;
   }
 }
 
