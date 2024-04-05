@@ -1,6 +1,6 @@
 ---
 layout: ../../layouts/MarkdownPostLayout.astro
-title: The fourth project
+title: Fourth project
 author: "Astro Milan"
 description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora, officia! Tempore dicta mollitia blanditiis aspernatur temporibus provident numquam expedita ab sapiente, minima repellat nihil fuga facere reprehenderit maiores deleniti hic."
 image:
@@ -9,5 +9,3 @@ image:
 pubDate: 2022-08-08
 tags: ["astro", "successes"]
 ---
-
-This post should show up with my other blog posts, because `Astro.glob()` is returning a list of all my posts in order to create my list.
