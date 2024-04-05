@@ -186,7 +186,7 @@ body {
   justify-content: center;
   padding: 1rem;
   border-radius: var(--border-radius-20);
-  background: url("/public/it-wire.svg") repeat;
+  background: url("/it-wire.svg") repeat;
 }
 
 @media screen and (min-width: 768px) {
@@ -430,7 +430,7 @@ body {
 
 @media screen and (min-width: 1024px) {
   .about {
-    height: calc(100vh - 98px);
+    height: calc(100vh - 78px);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -513,7 +513,7 @@ body {
 .about__box {
   flex: 1;
   background-color: #fff;
-  border-radius: 20px;
+  border-radius: var(--border-radius-20);
   box-shadow: 0 2px 10px rgba(45, 45, 45, 0.1);
 }
 
@@ -616,7 +616,7 @@ body {
 @media screen and (min-width: 1360px) {
   .contact-container__item:first-child {
     display: flex;
-    background: url("/public/Milan_right.webp") no-repeat bottom left;
+    background: url("/Milan_right.webp") no-repeat bottom left;
     background-size: contain;
   }
 }
