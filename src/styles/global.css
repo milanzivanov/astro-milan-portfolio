@@ -191,7 +191,6 @@ body {
   justify-content: flex-start;
   align-items: center;
   height: calc(100vh - 125px);
-  /* background: url("/public/it-wire.svg") repeat; */
 }
 
 .hero-container {

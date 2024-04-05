@@ -34,7 +34,6 @@ import { Icon } from "astro-icon";
   @media screen and (min-width: 1024px) {
     .header {
       padding: 0;
-      /* box-shadow: 0 1px 5px rgba(45, 45, 45, 0.1); */
     }
   }
 
@@ -42,9 +41,7 @@ import { Icon } from "astro-icon";
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /* background-color: var(--header-color-o-90); */
     padding: 0.5rem;
-    /* border-radius: var(--border-radius-5); */
   }
 
   .logo {
@@ -137,12 +134,12 @@ import { Icon } from "astro-icon";
   .nav-links__mobile {
     position: fixed;
     inset: 0 0 0 0;
+    background: url("/public/it-wire.svg") repeat;
     display: none;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     width: 100%;
-    /* height: calc(100vh - 80px); */
     background-color: var(--primary-heading-color);
     z-index: 11;
   }
@@ -152,7 +149,7 @@ import { Icon } from "astro-icon";
     text-decoration: none;
     padding: 1rem;
     color: var(--color);
-    font-size: 1rem;
+    font-size: 1.3rem;
     text-decoration: underline;
   }
 
