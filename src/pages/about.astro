@@ -61,7 +61,7 @@ const companies = [
     <Layout>
       <section class="about">
         <div class="wrapper">
-          <div class="about-container about-container--small">
+          <div class="about-container">
             <div class="about-container__box">
               <div class="about-container-text">
                 <h2 class="h2-title">About Me</h2>
@@ -181,6 +181,276 @@ const companies = [
       <Footer />
     </Layout>
     <style>
+      .about {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 1rem 0;
+      }
+
+      @media screen and (min-width: 1024px) {
+        .about {
+          height: calc(100vh - 78px);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+      }
+
+      .about-container {
+        position: relative;
+        display: flex;
+        width: 100%;
+      }
+
+      .about-container__box {
+        background-color: #fff;
+        flex: 1;
+        padding: 1rem;
+        border-radius: 20px;
+        box-shadow: 0 2px 10px rgba(45, 45, 45, 0.1);
+      }
+
+      .about-container__bg {
+        position: absolute;
+        inset: 0 0 0 50%;
+        box-shadow: none;
+        right: 0;
+        background-image: url(/Milan_left.webp);
+        background-repeat: no-repeat;
+        background-position: 100% 100%;
+        background-size: contain;
+        display: none;
+      }
+
+      @media screen and (min-width: 1024px) {
+        .about-container__bg {
+          display: block;
+        }
+      }
+
+      .about-container-text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        width: 100%;
+        position: relative;
+        z-index: 5;
+      }
+
+      @media screen and (min-width: 768px) {
+        .about-container-text {
+          align-items: start;
+        }
+      }
+
+      @media screen and (min-width: 1024px) {
+        .about-container-text {
+          width: 50%;
+        }
+      }
+
+      .about-container__content {
+        display: flex;
+        flex-flow: column nowrap;
+        padding: 0 0 3rem 0;
+        gap: 1rem;
+      }
+
+      @media screen and (min-width: 768px) {
+        .about-container__content {
+          flex-flow: row wrap;
+        }
+      }
+
+      .about__box {
+        flex: 1;
+        background-color: #fff;
+        border-radius: var(--border-radius-20);
+        box-shadow: 0 2px 10px rgba(45, 45, 45, 0.1);
+      }
+
+      @media screen and (min-width: 768px) {
+        .about__box {
+          flex: 1 1 48%;
+        }
+      }
+
+      @media screen and (min-width: 1024px) {
+        .about__box {
+          flex: 1 1 33.333%;
+        }
+      }
+
+      .about__box--no-bg {
+        background-color: transparent;
+        box-shadow: 0 0 0 0;
+      }
+
+      .what-i-do {
+        height: 100vh;
+
+        text-align: center;
+        padding: 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .what-i-do-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+      }
+
+      .companies-container {
+        position: relative;
+      }
+
+      .companies-box {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        width: 100%;
+        margin: auto;
+        flex-direction: column;
+      }
+
+      @media screen and (min-width: 1024px) {
+        .companies-box {
+          flex-direction: row;
+        }
+      }
+
+      .company-box__item {
+        min-width: 25%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 1rem 0;
+      }
+
+      /* contact */
+      .contact {
+        display: flex;
+        justify-content: center;
+
+        flex-direction: column;
+      }
+
+      .contact-container {
+        display: flex;
+        width: 100%;
+        text-align: left;
+        background-color: #fff;
+        border-radius: 20px;
+      }
+
+      @media screen and (min-width: 1360px) {
+        .contact-container {
+          width: 100%;
+        }
+      }
+
+      .contact-container__item {
+        flex: 1;
+        display: flex;
+        width: 100%;
+        align-items: center;
+      }
+
+      .contact-container__item:first-child {
+        display: none;
+      }
+
+      @media screen and (min-width: 1360px) {
+        .contact-container__item:first-child {
+          display: flex;
+          background: url("/Milan_right.webp") no-repeat bottom left;
+          background-size: contain;
+        }
+      }
+
+      .contact-container__form {
+        width: 100%;
+        padding: 1rem;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        background-color: var(--background-color);
+        box-shadow: 0 2px 10px rgba(45, 45, 45, 0.1);
+      }
+
+      @media screen and (min-width: 768px) {
+        .contact-container__form {
+          border-radius: 20px;
+          margin: 1rem;
+        }
+      }
+
+      label.form__label {
+        color: var(--primary-heading-color);
+        padding-bottom: 1rem;
+      }
+
+      .form__input {
+        padding: 1rem;
+        margin-bottom: 1rem;
+        border-radius: 10px;
+        border: 0;
+      }
+
+      .form__textarea {
+        margin-bottom: 1rem;
+        border-radius: 10px;
+        border: 0;
+      }
+
+      .form__btn {
+        border: 0;
+        width: 100%;
+        padding: 1rem;
+        background-color: var(--primary-heading-color);
+        display: inline-block;
+        color: #fff;
+        border-radius: 10px;
+        margin-left: auto;
+        cursor: pointer;
+      }
+
+      @media screen and (min-width: 1024px) {
+        .form__btn {
+          width: 30%;
+        }
+      }
+
+      @media screen and (min-width: 1024px) {
+        .contact-container--link {
+          width: auto;
+          font-size: 0.5rem;
+        }
+      }
+
+      @keyframes gradient {
+        0% {
+          background-position: 0% 50%;
+        }
+
+        50% {
+          background-position: 100% 50%;
+        }
+
+        100% {
+          background-position: 0% 50%;
+        }
+      }
+
       .skill-box {
         display: flex;
         flex-wrap: wrap;
