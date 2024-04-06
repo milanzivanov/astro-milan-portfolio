@@ -135,9 +135,11 @@ const companies = [
             </div>
 
             <!-- contact me -->
-            <!-- <div class="about__box">
+            <div class="about__box">
               <div class="contact">
-                <h2 class="h2-title h2-title--center">Get in touch with me</h2>
+                <h2 class="h2-title h2-title--contact h2-title--text-position">
+                  Get in touch with me
+                </h2>
                 <div class="contact-container">
                   <div class="contact-container__item"></div>
                   <div class="contact-container__item">
@@ -176,7 +178,7 @@ const companies = [
                   </div>
                 </div>
               </div>
-            </div> -->
+            </div>
           </div>
         </div>
       </section>
@@ -493,13 +495,21 @@ const companies = [
       }
 
       .h2-title {
-        text-transform: uppercase;
+        text-transform: lowercase;
         padding: 2rem 0;
         color: var(--primary-heading-color);
+      }
+      .h2-title::first-letter {
+        text-transform: uppercase;
       }
 
       .h2-title--text-position {
         text-align: center;
+      }
+
+      .h2-title--contact {
+        text-align: left;
+        padding: 2rem 0 2rem 1rem;
       }
 
       .svg-skill-icon {
