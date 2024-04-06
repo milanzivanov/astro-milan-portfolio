@@ -145,6 +145,16 @@ body {
   width: 100%;
 }
 
+.wrapper--hero {
+  max-width: 100%;
+}
+
+@media screen and (min-width: 1360px) {
+  .wrapper--hero {
+    max-width: 1200px;
+  }
+}
+
 /* //////////////// */
 /* hero */
 .main {
@@ -179,15 +189,17 @@ body {
 
 .hero-container {
   position: relative;
-  width: 100%;
+  width: 80%;
   background-color: inherit;
   z-index: 5;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 1rem;
-  border-radius: var(--border-radius-20);
-  background: url("/it-wire.svg") repeat;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  background: url(/it-wire.svg) repeat;
+  background-color: var(--header-color-o-90);
 }
 
 @media screen and (min-width: 768px) {
@@ -201,11 +213,15 @@ body {
     justify-content: flex-start;
     overflow: hidden;
     box-shadow: 0 2px 10px rgba(45, 45, 45, 0.1);
-    padding: 0 1rem;
+    padding: 0 0 0 3rem;
   }
 }
 @media screen and (min-width: 1360px) {
   .hero-container {
+    padding: 0 1rem;
+    justify-content: space-between;
+    width: 100%;
+    border-radius: var(--border-radius-20);
     flex-direction: row-reverse;
   }
 }
@@ -229,15 +245,17 @@ body {
   max-width: 25vw;
 }
 
-@media screen and (min-width: 1897px) {
+@media screen and (min-width: 1360px) {
   .hero-container__box--bg-image img {
     display: block;
+    max-width: 26vw;
   }
 }
 
 .h1-primary-title {
   font-weight: 400;
-  color: var(--background-color-oposite);
+  /* color: var(--background-color-oposite); */
+  color: var(--background-color);
   padding: 1rem 0 2rem 0;
   font-size: 2.5rem;
   line-height: 1.2;
@@ -365,12 +383,12 @@ body {
   transform: translateY(-50%);
   width: 85%;
   transition: 0.5s ease;
-  color: var(--primary-heading-color);
+  color: var(--background-color-oposite);
   padding: 0.5rem 0 0.5rem 1rem;
   text-align: start;
   border-top-right-radius: var(--border-radius-20);
   border-bottom-right-radius: var(--border-radius-20);
-  /* background-color: var(--background-main-color); */
+  background-color: var(--background-main-color);
 }
 
 @media screen and (min-width: 768px) {
@@ -382,6 +400,8 @@ body {
 
 @media screen and (min-width: 1024px) {
   .h3-title--position {
+    color: var(--primary-heading-color);
+    background-color: transparent;
     top: 0;
     transform: translateY(0);
     width: 100%;

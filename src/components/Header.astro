@@ -121,6 +121,11 @@ import { Icon } from "astro-icon";
     color: var(--background-main-color);
   }
 
+  .nav-links a:hover,
+  .nav-links a:active {
+    color: var(--primary-heading-color);
+  }
+
   /* mob nav */
   .nav-links__mobile {
     display: none;
@@ -129,7 +134,7 @@ import { Icon } from "astro-icon";
   .nav-links__mobile {
     position: fixed;
     inset: 0 0 0 0;
-    background: url("/public/it-wire.svg") repeat;
+    background: url("/it-wire.svg") repeat;
     display: none;
     flex-direction: column;
     align-items: center;
