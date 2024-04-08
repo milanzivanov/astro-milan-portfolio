@@ -125,7 +125,7 @@ html {
 
 body {
   font-family: "Poppins", sans-serif;
-  background-color: var(--background-main-color);
+  background-color: var(--background-color);
   word-wrap: break-word;
   overflow-wrap: break-word;
   font-weight: 400;
@@ -297,14 +297,26 @@ body {
 }
 @media screen and (min-width: 1024px) {
   .h2-title {
+    position: relative;
     padding: 1rem 0;
     font-size: 1.5rem;
+    width: 100%;
   }
+}
+
+.h2-title--about::before {
+  position: absolute;
+  content: "";
+  bottom: 0;
+  width: 50%;
+  height: 3px;
+  background-color: var(--primary-heading-color);
+  border-radius: var(--border-radius-5);
 }
 
 .h3-title {
   font-size: 1.3rem;
-  padding: 0 0 1.5rem 0;
+  padding: 0 0 0.5rem 0;
   color: var(--primary-heading-color);
 }
 
@@ -331,6 +343,12 @@ body {
 
 .text-default--pb {
   padding: 0 0 2rem 0;
+}
+
+@media screen and (min-width: 1024px) {
+  .text-default--pb {
+    padding: 1rem 0 2rem 0;
+  }
 }
 
 /* porfolio */
@@ -415,7 +433,18 @@ body {
 
 @media screen and (min-width: 1360px) {
   .h3-title--for-desktop {
+    position: relative;
     display: block;
+  }
+
+  .h3-title--for-desktop::before {
+    position: absolute;
+    content: "";
+    bottom: 0;
+    width: 50%;
+    height: 3px;
+    background-color: var(--primary-heading-color);
+    border-radius: var(--border-radius-5);
   }
 }
 
