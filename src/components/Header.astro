@@ -163,11 +163,22 @@ import { Icon } from "astro-icon";
 
     .nav-links a {
       display: inline-block;
-      padding: 15px 20px;
+      padding: 15px 30px 5px 0;
     }
 
     .nav-links a.active {
+      position: relative;
       color: var(--primary-heading-color);
+    }
+
+    .nav-links a.active::before {
+      position: absolute;
+      content: "";
+      bottom: 0;
+      height: 3px;
+      width: 70%;
+      color: var(--primary-heading-color);
+      background-color: var(--primary-heading-color);
     }
 
     .nav-link:hover,

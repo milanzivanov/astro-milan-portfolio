@@ -285,7 +285,6 @@ body {
 
 .h2-title {
   font-size: 1.1rem;
-  text-transform: uppercase;
   padding: 1rem;
   color: var(--primary-heading-color);
 }
@@ -295,6 +294,7 @@ body {
     font-size: 1.3rem;
   }
 }
+
 @media screen and (min-width: 1024px) {
   .h2-title {
     position: relative;
