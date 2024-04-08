@@ -25,16 +25,20 @@ import { Icon } from "astro-icon";
 
 <style is:global>
   .header {
-    width: 100%;
     background-color: var(--header-color-o-90);
     position: relative;
     z-index: 11;
-    padding: 1rem;
+
+    margin: auto;
+    width: 100%;
   }
 
-  @media screen and (min-width: 1024px) {
+  @media screen and (min-width: 1360px) {
     .header {
+      width: fit-content;
       padding: 0;
+      border-bottom-left-radius: var(--border-radius-10);
+      border-bottom-right-radius: var(--border-radius-10);
     }
   }
 
@@ -135,7 +139,7 @@ import { Icon } from "astro-icon";
     align-items: center;
     justify-content: center;
     width: 100%;
-    background-color: var(--primary-heading-color);
+    background-color: var(--code-background-color);
     z-index: 11;
   }
 
@@ -143,9 +147,9 @@ import { Icon } from "astro-icon";
     display: block;
     text-decoration: none;
     padding: 1rem;
-    color: var(--color);
+    color: var(--md-color);
     font-size: 1.3rem;
-    text-decoration: underline;
+    text-decoration: none;
   }
 
   .open {
@@ -161,12 +165,14 @@ import { Icon } from "astro-icon";
       background: none;
     }
 
-    .nav-links a {
+    .nav-links > a {
+      position: relative;
       display: inline-block;
-      padding: 15px 30px 5px 0;
+      padding: 0 30px 5px 0;
     }
 
-    .nav-links a.active {
+    .nav-links a.active,
+    .nav-links a:hover {
       position: relative;
       color: var(--primary-heading-color);
     }
@@ -177,8 +183,22 @@ import { Icon } from "astro-icon";
       bottom: 0;
       height: 3px;
       width: 70%;
-      color: var(--primary-heading-color);
       background-color: var(--primary-heading-color);
+    }
+
+    .nav-links a::before {
+      position: absolute;
+      content: "";
+      bottom: 0;
+      height: 3px;
+      width: 0;
+      transform-origin: left center;
+      transition: all 0.15s ease-in-out;
+      background-color: var(--primary-heading-color);
+    }
+
+    .nav-links a:hover::before {
+      width: 70%;
     }
 
     .nav-link:hover,
