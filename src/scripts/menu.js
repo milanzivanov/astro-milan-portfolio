@@ -1,11 +1,6 @@
 /////////////////////
 // mobile menu
 document.querySelector(".hamburger").addEventListener("click", () => {
-  // hamburger menu
-  // document.querySelector(".line--middle").classList.toggle("active");
-  // document.querySelector(".line--top").classList.toggle("active");
-  // document.querySelector(".line--bottom").classList.toggle("active");
-
   document.querySelector(".nav-links__mobile").classList.toggle("open");
 });
 

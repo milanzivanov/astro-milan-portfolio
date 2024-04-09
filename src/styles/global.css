@@ -315,12 +315,12 @@ body {
 }
 
 .h3-title {
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   padding: 0 0 0.5rem 0;
   color: var(--primary-heading-color);
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
   .h3-title {
     font-size: 1.5rem;
   }
