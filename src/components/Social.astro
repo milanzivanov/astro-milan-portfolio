@@ -3,7 +3,7 @@ import { Icon } from "astro-icon";
 const { platform, username, iconName } = Astro.props;
 ---
 
-<a href={`https://www.${platform}.com/${username}`}>
+<a href={`https://www.${platform}.com/${username}`} target="_blank">
   <Icon name={iconName} width="40" class="svg-social-icon" />
 </a>
 
